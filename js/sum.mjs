@@ -3,8 +3,8 @@ import { parser as m, print } from './core/matrix'
 const sum = (...matrices) => {
   return matrices.reduce((result, matrix) => {
     return matrix.map((row, i) => {
-      return row.map((value, j) => {
-        return result[i][j] + value
+      return row.map((entry, j) => {
+        return result[i][j] + entry
       })
     })
   })
