@@ -8,6 +8,14 @@ export const parser = (matrixString) => {
     .map(row => row.map(v => Number(v)))
 }
 
+export const transpose = (matrix) => {
+  return matrix.map((row, i) => {
+    return row.map((entry, j) => {
+      return matrix[j][i]
+    })
+  })
+}
+
 export const print = (matrix) => {
   const str = matrix
     .map(row => row.join(' '))
